@@ -829,7 +829,15 @@
                         <a href="#" class="dropdown-item" onclick="showPage('resize-aspect-ratio')"><i class="fas fa-arrows-alt"></i> Advanced Resize + Aspect</a>
                         <a href="#" class="dropdown-item" onclick="showPage('resize-dimensions')"><i class="fas fa-ruler"></i> Resize with DPI</a>
                         <a href="#" class="dropdown-item" onclick="showPage('upscale-image')"><i class="fas fa-expand"></i> Upscale Image</a>
-                        
+                        <script>
+  atOptions = {
+    'key' : '2676c8da7be0f7457deefe98d039a56b',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
                         <div class="dropdown-category">COMPRESS & OPTIMIZE</div>
                         <a href="#" class="dropdown-item" onclick="showPage('compress-image')"><i class="fas fa-compress"></i> Compress Image</a>
                         <a href="#" class="dropdown-item" onclick="showPage('optimize-image')"><i class="fas fa-magic"></i> Optimize Image</a>
@@ -3162,35 +3170,87 @@
 </script>
 <script src="https://instantmemorize.com/d0986cdd6c7e565f330cb00eccc416f7/invoke.js"></script>
 
-<footer style="background:#0a0a0a;padding:25px 10px;text-align:center;border-top:2px solid #ff0000;font-family:sans-serif;">
+<footer style="background:#0a0a0a;padding:30px 10px;text-align:center;border-top:2px solid #ff0000;font-family:sans-serif;position:relative;overflow:hidden;">
 
-  <p style="
-    margin:0;
-    font-size:15px;
-    color:#ff0000;
-    animation: glow 2.5s ease-in-out infinite alternate;
-  ">
+  <h2 style="margin:0;color:white;">
+    Fast<span style="color:#ff0000;text-shadow:0 0 10px #ff0000;">Resize</span>Pro
+  </h2>
+
+  <p class="slogan">
+    Speed • Quality • Simplicity
+  </p>
+
+  <div style="margin:15px 0;">
+    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <p style="font-size:12px;color:#666;margin:0;">
     © 2026 FastResizePro All Rights Reserved
   </p>
 
 </footer>
 
 <style>
-@keyframes glow {
-  from {
+
+/* Slogan Glow + Scan Effect */
+.slogan{
+  margin:6px 0 15px;
+  font-size:13px;
+  color:#ff4d4d;
+  position:relative;
+  display:inline-block;
+  animation: glow 3s ease-in-out infinite alternate;
+  overflow:hidden;
+}
+
+.slogan::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+  animation: scan 4s linear infinite;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 5px #ff0000; }
+  to{
     text-shadow:
-      0 0 5px #ff0000,
       0 0 10px #ff0000,
-      0 0 20px #ff0000;
-  }
-  to {
-    text-shadow:
-      0 0 15px #ff0000,
-      0 0 30px #ff0000,
-      0 0 60px #ff0000;
+      0 0 20px #ff0000,
+      0 0 40px #ff0000;
   }
 }
+
+@keyframes scan{
+  0%{ left:-100%; }
+  100%{ left:100%; }
+}
+
+/* Social Icons */
+.icon{
+  color:#ff0000;
+  margin:0 12px;
+  font-size:20px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.icon:hover{
+  transform:scale(1.2);
+  text-shadow:
+    0 0 10px #ff0000,
+    0 0 25px #ff0000;
+}
+
 </style>
+
+<!-- FontAwesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 
 </body>
 </html>
